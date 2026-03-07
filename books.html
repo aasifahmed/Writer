@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sam Oliver - Author</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
+  <style>
+  
+  </style>
+</head>
+<body>
+
+<!-- ─── NAVIGATION ─── -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">Sam <span>Oliver</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-page="home">Home</a></li>
+      <li><a href="about.html" data-page="about">About</a></li>
+      <li><a href="books.html" class="active" data-page="books">Books</a></li>
+      <li><a href="contact.html" data-page="contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="books.html">Books</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- ════════════════════════════════════
+     BOOKS PAGE
+════════════════════════════════════ -->
+<div id="page-books">
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <span class="tag">Bibliography</span>
+      <div style="width:32px;height:2px;background:var(--accent);margin:0.75rem 0 1rem;"></div>
+      <h1>Twelve novels,<br><em>one voice</em></h1>
+    </div>
+  </div>
+
+  <!-- <div class="books-controls">
+    <button class="filter-btn active" onclick="filterBooks('all',this)">All Works</button>
+    <button class="filter-btn" onclick="filterBooks('novel',this)">Novels</button>
+    <button class="filter-btn" onclick="filterBooks('short',this)">Short Fiction</button>
+  </div> -->
+
+  <div class="books-grid" id="booksGrid">
+
+    <div class="bk-card" data-cat="novel">
+      <div class="book-card-featured">
+        <div class="bk-cover-inner bca-3">
+        <img src="gallery/the_custodian.jpg">
+        </div>
+      </div>
+      <div class="bk-title">The <em>Custodian</em></div>
+      <div class="hero-buttons">
+        <a href="https://www.amazon.com/dp/B0GRJQ4W8M" class="btn btn-dark" target="_blank">Read on Amazon</a>
+      </div>
+    </div>
+
+    <div class="bk-card" data-cat="novel">
+      <div class="book-card-featured">
+        <div class="bk-cover-inner bca-3">
+        <img src="gallery/the_unspoken_ledger.jpg">
+        </div>
+      </div>
+      <div class="bk-title">The <em>Unspoken Ledger</em></div>
+      <div class="hero-buttons">
+        <a href="https://www.amazon.com/dp/B0GQ6MBH66" class="btn btn-dark" target="_blank">Read on Amazon</a>
+      </div>
+    </div>
+
+    <div class="bk-card" data-cat="novel">
+      <div class="book-card-featured"><div class="bk-cover-inner bca-1">
+        <img src="gallery/the_bioluminescent_cartographer.jpg">
+      </div></div>
+      <div class="bk-title">The <em>Bioluminescent Cartographer</em></div>
+      <div class="hero-buttons">
+        <a href="https://www.amazon.com/dp/B0GPW7Z629" class="btn btn-dark" target="_blank">Read on Amazon</a>
+      </div>
+    </div>
+
+    <div class="bk-card" data-cat="novel">
+      <div class="book-card-featured"><div class="bk-cover-inner bca-2">
+        <img src="gallery/the_listener_of_echoes.jpg">
+      </div></div>
+      <div class="bk-title">The <em>Listener of Echoes</em></div>
+      <div class="hero-buttons">
+        <a href="https://www.amazon.com/dp/B0G1S9P32L" class="btn btn-dark" target="_blank">Read on Amazon</a>
+      </div>
+    </div>
+
+    <div class="bk-card" data-cat="novel">
+      <div class="book-card-featured"><div class="bk-cover-inner bca-0">
+        <img src="gallery/the_dead_letter_office.jpg">
+      </div></div>
+      <div class="bk-title">The <em>Dead Letter Office</em></div>
+      <div class="hero-buttons">
+        <a href="https://www.amazon.com/dp/B0FWBY81TH" class="btn btn-dark" target="_blank">Read on Amazon</a>
+      </div>
+    </div>
+
+    <div class="bk-card" data-cat="novel">
+      <div class="book-card-featured"><div class="bk-cover-inner bca-0">
+        <img src="gallery/the_map_that_lies.jpg">
+      </div></div>
+      <div class="bk-title">The <em>Map That Lies</em></div>
+      <div class="hero-buttons">
+        <a href="https://www.amazon.com/dp/B0FTXDJSBF" class="btn btn-dark" target="_blank">Read on Amazon</a>
+      </div>
+    </div>
+
+    <div class="bk-card" data-cat="novel">
+      <div class="book-card-featured"><div class="bk-cover-inner bca-4">
+        <img src="gallery/the_eternal_intern.jpg">
+      </div></div>
+      <div class="bk-title">The <em>Eternal Intern</em></div>
+      <div class="hero-buttons">
+        <a href="https://www.amazon.com/dp/B0FTG2NP98" class="btn btn-dark" target="_blank">Read on Amazon</a>
+      </div>
+    </div>
+
+    <div class="bk-card" data-cat="novel">
+      <div class="book-card-featured"><div class="bk-cover-inner bca-5">
+        <img src="gallery/galactic_roommates.jpg">
+      </div></div>
+      <div class="bk-title"><em>Galactic Roommates</em></div>
+      <div class="hero-buttons">
+        <a href="https://www.amazon.com/dp/B0FT1L2X53" class="btn btn-dark" target="_blank">Read on Amazon</a>
+      </div>
+    </div>
+
+    <div class="bk-card" data-cat="novel">
+      <div class="book-card-featured"><div class="bk-cover-inner bca-5">
+        <img src="gallery/vivid_trench.jpg">
+      </div></div>
+      <div class="bk-title"><em>Vivid Trench</em></div>
+      <div class="hero-buttons">
+        <a href="https://www.amazon.com/dp/B0FJ8VJ7X8" class="btn btn-dark" target="_blank">Read on Amazon</a>
+      </div>
+    </div>
+
+    <div class="bk-card" data-cat="novel">
+      <div class="book-card-featured"><div class="bk-cover-inner bca-5">
+        <img src="gallery/zia_and_the_cloud_garden.jpg">
+      </div></div>
+      <div class="bk-title"><em>Zia and the Cloud Garden</em></div>
+      <div class="hero-buttons">
+        <a href="https://www.amazon.com/dp/B0F3FB5HHZ" class="btn btn-dark" target="_blank">Read on Amazon</a>
+      </div>
+    </div>
+
+    <div class="bk-card" data-cat="novel">
+      <div class="book-card-featured"><div class="bk-cover-inner bca-5">
+        <img src="gallery/vintage_madras.jpg">
+      </div></div>
+      <div class="bk-title"><em>Vintage Madras</em></div>
+      <div class="hero-buttons">
+        <a href="https://www.amazon.com/dp/B0F9XDJQ7Q" class="btn btn-dark" target="_blank">Read on Amazon</a>
+      </div>
+    </div>
+
+    <div class="bk-card" data-cat="novel">
+      <div class="book-card-featured"><div class="bk-cover-inner bca-5">
+        <img src="gallery/the_skystone_expedition.jpg">
+      </div></div>
+      <div class="bk-title">The <em>Skystone Expedition</em></div>
+      <div class="hero-buttons">
+        <a href="https://www.amazon.com/dp/B0F74JLK4G" class="btn btn-dark" target="_blank">Read on Amazon</a>
+      </div>
+    </div>
+
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Sam <em>Oliver</em></div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <span class="footer-copy">© 2026 Sam Oliver</span>
+    </div>
+  </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

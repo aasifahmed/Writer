@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sam Oliver - Author</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
+  <style>
+  
+  </style>
+</head>
+<body>
+
+<!-- ─── NAVIGATION ─── -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">Sam <span>Oliver</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active" data-page="home">Home</a></li>
+      <li><a href="about.html" data-page="about">About</a></li>
+      <li><a href="books.html" data-page="books">Books</a></li>
+      <li><a href="contact.html" data-page="contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="books.html">Books</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- ════════════════════════════════════
+     HOME PAGE
+════════════════════════════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <span class="tag hero-tag">Award-Winning Author · Children Stories</span>
+      <h1>Stories that<br><em>stay with you</em></h1>
+      <p>Stories exploring supernatural mystery, paranormal investigation, hidden truth, dark forces, metaphysical thrillers, artificial intelligence, etc., that interest the children of this era.</p>
+      <div class="hero-buttons">
+        <a href="books.html" class="btn btn-dark">Browse Books</a>
+        <a href="about.html" class="btn btn-outline">About Sam</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-img">
+        <div class="author-initials">SO</div>
+      </div>
+      <div class="hero-card-body">
+        <h3>Sam Oliver</h3>
+        <p>Children's Book Author · Based in India</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="stats-inner">
+      <div class="reveal">
+        <div class="stat-number">10+</div>
+        <div class="stat-label">Published Books</div>
+      </div>
+      <div class="reveal">
+        <div class="stat-number">2</div>
+        <div class="stat-label">Years of Writing</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Latest Book -->
+  <div class="section">
+    <div class="section-header">
+      <span class="tag">Latest Release · 2026</span>
+      <div class="divider"></div>
+      <h2>Featured <em>Novel</em></h2>
+    </div>
+    <div class="featured-grid reveal">
+      <div class="book-card-featured">
+        <div class="book-cover-art bca-0">
+          <img src="gallery/the_unspoken_ledger.jpg">
+        </div>
+      </div>
+      <div class="featured-info">
+        <h3>The <em>Unspoken Ledger</em></h3>
+        <p class="featured-meta">Suspense Thriller · 2026</p>
+        <p>Detective Marius takes on one last occult case at the West End Docks, only to awaken as a ghost beside his own body. Trapped between worlds, he struggles to guide rookie Officer Wren toward the truth behind his death. As stolen artifacts and shadowy forces converge, the line between the living and the void begins to thin. Together, they must unravel a conspiracy that threatens far more than a single life.</p>
+        <a href="books.html" class="btn btn-accent">See All Books</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Sam <em>Oliver</em></div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <span class="footer-copy">© 2026 Sam Oliver</span>
+    </div>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sam Oliver - Author</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
+  <style>
+  
+  </style>
+</head>
+<body>
+
+<!-- ─── NAVIGATION ─── -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">Sam <span>Oliver</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-page="home">Home</a></li>
+      <li><a href="about.html" class="active" data-page="about">About</a></li>
+      <li><a href="books.html" data-page="books">Books</a></li>
+      <li><a href="contact.html" data-page="contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="books.html">Books</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- ════════════════════════════════════
+     ABOUT PAGE
+════════════════════════════════════ -->
+<div id="page-about">
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <span class="tag">The Author</span>
+      <div style="width:32px;height:2px;background:var(--accent);margin:0.75rem 0 1rem;"></div>
+      <h1>A life spent<br><em>inside stories</em></h1>
+    </div>
+  </div>
+
+  <div class="about-layout">
+    <div class="about-body">
+      <p>
+        Sam Oliver grew up in a house full of unfinished sentences and belonged to a working family. Since childhood, he has been curious and often asked himself “WHY” about everything that happened around him. However, Sam had limited access to books in his early life, which later inspired him to start writing children's books with illustrations that engage young readers.
+      </p>
+      <p class="reveal">
+        He majored in Computer Applications and then spent a year working as an Associate at one of the top server enterprises. Later, he landed a job at one of the FAANG companies, where he worked on improving AI technology. That experience helped him understand how young children interact with emerging technology. While AI can narrate stories, Sam believes that books with illustrations keep children engaged throughout the entire story. His debut book, <em>The Skystone Expedition</em>, was written in May 2025.
+      </p>
+      <p class="reveal">
+        His stories revolve around supernatural mysteries, paranormal investigations, hidden truths, dark forces, metaphysical thrillers, and artificial intelligence, topics that intrigue children of this era.
+      </p>
+      <p class="reveal">
+        Sam currently divides his time between his daytime job and writing books during holidays. He is also an aquarium hobbyist and a phytophile.
+      </p>
+
+      <div class="timeline reveal">
+        <h4>Timeline</h4>
+                <div class="tl-item"><span class="tl-year">2025</span><span class="tl-text"><em>Started publishing books via Kindle</em></span></div>
+        <div class="tl-item"><span class="tl-year">2024</span><span class="tl-text"><em>Joined Amazon Kindle</em></span></div>
+        <div class="tl-item"><span class="tl-year">2019</span><span class="tl-text"><em>Landed a permanent job in one of the FAANG companies</em></span></div>
+        <div class="tl-item"><span class="tl-year">2018</span><span class="tl-text"><em>Started a Contractual job as Associate</em></span></div>
+        <div class="tl-item"><span class="tl-year">2017</span><span class="tl-text"><em>Completed Bachelor's Degree</em></span></div>
+        <div class="tl-item"><span class="tl-year">2014</span><span class="tl-text"><em>Finished Schooling</em></span></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sidebar-card">
+        <h4>At a Glance</h4>
+        <div class="info-row"><span class="label">Born</span><span class="value">1997</span></div>
+        <div class="info-row"><span class="label">Education</span><span class="value">MIT</span></div>
+        <div class="info-row"><span class="label">Debut</span><span class="value">2025</span></div>
+        <div class="info-row"><span class="label">Novels</span><span class="value">10+ published</span></div>
+        <div class="info-row"><span class="label">Genre</span><span class="value">Children Stories</span></div>
+        <div class="info-row"><span class="label">Based</span><span class="value">Chennai, India</span></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Sam <em>Oliver</em></div>
+      <ul class="footer-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <span class="footer-copy">© 2026 Sam Oliver</span>
+    </div>
+  </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
