@@ -1,1 +1,1 @@
-This project is about an Author whose pen name is Sam Oliver who publishes Children books. 
+This project is about an author whose pen name is Sam Oliver, he publishes Children books on Kindle. 
