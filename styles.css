@@ -944,3 +944,40 @@
     @media (max-width: 400px) {
       .books-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
     }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 1rem 0rem;
+}
+
+.pg-btn {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #d4b896;
+  background: transparent;
+  color: #5c3d1e;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.pg-btn:hover {
+  background: #5c3d1e;
+  color: #fff;
+}
+
+.pg-btn.active {
+  background: #5c3d1e;
+  color: #fff;
+  border-color: #5c3d1e;
+  font-weight: 600;
+}
