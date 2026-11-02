@@ -1,474 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sam Oliver - Children's Book Author & Visual Storyteller</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css">
-  <style>
-  
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Books - Sam Oliver, Children's Book Author</title>
+<meta name="description" content="Browse all illustrated storybooks by Sam Oliver. Tap a book to see its reader age, a short description and where to buy it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- ─── NAVIGATION ─── -->
-<nav id="navbar">
-  <div class="nav-inner">
-    <a class="nav-logo" href="index.html">Sam <span>Oliver</span></a>
-    <ul class="nav-links">
-      <li><a href="index.html" data-page="home">Home</a></li>
-      <li><a href="about.html" data-page="about">About</a></li>
-      <li><a href="books.html" class="active" data-page="books">Books</a></li>
-      <li><a href="contact.html" data-page="contact">Contact</a></li>
-    </ul>
-    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">Sam <span>Oliver</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Menu">Menu</button>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="books.html" aria-current="page">Books</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="books.html">Books</a>
-    <a href="contact.html">Contact</a>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <h1>100+ books, one voice</h1>
+      <p>Tap any book to see who it's for and where to get it.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <!-- For books1.html use data-books="2"; for books2.html use data-books="3" -->
+      <div class="grid" data-books="1"></div>
+      <nav class="pager" aria-label="Pages">
+        <a href="books.html" aria-current="page">1</a>
+        <a href="books1.html">2</a>
+        <a href="books2.html">3</a>
+      </nav>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <a class="logo" href="index.html">Sam <span>Oliver</span></a>
+    <nav class="nav" aria-label="Footer">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="books.html">Books</a><a href="contact.html">Contact</a>
+    </nav>
+    <p>© 2026 Sam Oliver</p>
   </div>
-</nav>
+</footer>
 
-<!-- ════════════════════════════════════
-     BOOKS PAGE
-════════════════════════════════════ -->
-<div id="page-books">
-
-  <div class="page-hero">
-    <div class="page-hero-inner">
-      <span class="tag">Bibliography</span>
-      <div style="width:32px;height:2px;background:var(--accent);margin:0.75rem 0 1rem;"></div>
-      <h1>100+ books,<br><em>one voice</em></h1>
-    </div>
-  </div>
-
-  <!-- <div class="books-controls">
-    <button class="filter-btn active" onclick="filterBooks('all',this)">All Works</button>
-    <button class="filter-btn" onclick="filterBooks('novel',this)">Novels</button>
-    <button class="filter-btn" onclick="filterBooks('short',this)">Short Fiction</button>
-  </div> -->
-
-  <div class="books-grid" id="booksGrid">
-
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/bigfoot_pi.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>Bigfoot P.I.</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0HNTQLWTR" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/robones" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/lost_sock_express.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>Lost Sock Express</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0HN8YZSK8" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/robones" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/cyber_heist.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>Cyber Heist</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0HMJG4N89" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/robones" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/vintage_ring.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>Vintage Ring</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0HM16VH9T" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/robones" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/flavor_of_the_seasons.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>Flavor of the Seasons</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0HLWH4FMK" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/Herorol" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/canopy_rally.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>Canopy Rally</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0HLR2YLY1" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/Glaeth" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/acre_of_echoes.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>Acre of Echoes</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0HKW3KX9Z" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/fltesym" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>  
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/titans_marrow.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>Titan's Marrow</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0HKGCG5MN" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/robones" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/library_of_whispers.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>Library of Whispers</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0HH4P9WZB" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/robones" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/monster_foragers_diner.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>Monster Forager's Diner</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0HJRSQ2YM" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/robones" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/last_tech_support.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>Last Tech Support</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0HJHBCT47" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/robones" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/recipe_for_the_past.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>Recipe for the Past</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0HJDHBV9S" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/robones" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/the_overlay.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>The Overlay</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0HJCVBKR4" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/Herorol" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/iron_harvest.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>Iron Harvest</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0HJ98J2ZL" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/Herorol" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/five_stars_or_less.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>Five Stars or Less</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0H5D322XR" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/Herorol" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/curse_of_the_27_club.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>Curse of the 27 Club</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0HJ649JHW" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/Herorol" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/migrating_woods.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>Migrating Woods</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0HJ5W1WCW" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/Herorol" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/spindle_and_the_smog.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>Spindle and the Smog</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0HJ3BGCP2" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/robones" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/clockwork_huntsman.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>Clockwork Huntsman</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0HHW5M8ZR" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/robones" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/sleepy_constellation.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>Sleepy Constellation</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0GX463B8L" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/robones" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/shop_of_quiet_sounds.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>Shop of Quiet Sounds</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0HHFNQN99" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/robones" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/night_garden_nursery.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>Night Garden Nursery</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0HHDM35J4" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/Herorol" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/cloud_seeder.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>Cloud-Seeder</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0HHB2MN41" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/Glaeth" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/glitch_in_the_canvas.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>Glitch in the Canvas</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0HH93LT33" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/fltesym" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>  
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/spores_of_eden.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>Spores of Eden</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0HH7LD7TM" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/robones" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/library_of_whispers.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>Library of Whispers</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0HH4P9WZB" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/robones" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/glass_parasite.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>Glass Parasite</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0HH4BNBLL" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/robones" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/cloud_weaver.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>Cloud Weaver</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0HH38YX9C" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/robones" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/changelings_ransom.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>Changeling's Ransom</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0HGYWWTLJ" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/robones" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>
-
-    <div class="bk-card" data-cat="novel">
-      <div class="book-card-featured">
-        <div class="bk-cover-inner bca-3">
-        <img src="gallery/the_cat_from_planet_x.jpg">
-        </div>
-      </div>
-      <div class="bk-title"><em>The Cat from Planet X</em></div>
-      <div class="hero-buttons">
-        <a href="https://www.amazon.com/dp/B0HGY68641" class="btn btn-dark" target="_blank">Read on Amazon</a>
-        <!-- <a href="https://samoliverauthor.gumroad.com/l/Herorol" class="btn btn-dark" target="_blank">Buy on Gumroad</a> -->
-      </div>
-    </div>
-
-
-  </div>
-
-  <div class="pagination">
-    <a href="books.html" class="pg-btn active">1</a>
-    <a href="books1.html" class="pg-btn">2</a>
-    <a href="books2.html" class="pg-btn">3</a>
-  </div>
-
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-logo">Sam <em>Oliver</em></div>
-      <ul class="footer-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="books.html">Books</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <span class="footer-copy">© 2026 Sam Oliver</span>
-    </div>
-  </footer>
-</div>
+<script src="books-data.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
