@@ -137,13 +137,11 @@ h1,h2,h3,.logo{font-family:'Fredoka',system-ui,sans-serif;font-weight:600;line-h
 .social{display:flex;flex-wrap:wrap;gap:10px}
 .social a{border:2px solid var(--dusk);color:var(--dusk);font-weight:800;text-decoration:none;border-radius:999px;padding:.3em 1em;transition:background .2s,color .2s}
 .social a:hover{background:var(--dusk);color:#fff}
-.form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form{display:grid;gap:16px}
 .form label{display:grid;gap:6px;font-weight:800}
-.form .full{grid-column:1/-1}
 .form input,.form select,.form textarea{font:inherit;font-weight:400;color:var(--ink);background:var(--paper);border:2px solid transparent;border-radius:14px;padding:.7em 1em;width:100%}
 .form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:var(--dusk);background:#fff}
 .form textarea{min-height:140px;resize:vertical}
-.form-note{grid-column:1/-1;font-weight:800;color:var(--teal);display:none}
+.form-note{font-weight:800;color:var(--teal);display:none}
 .form-note.show{display:block}
 @media(max-width:820px){.about,.contact{grid-template-columns:1fr}}
-@media(max-width:560px){.form{grid-template-columns:1fr}}

@@ -97,14 +97,15 @@
       var endpoint = form.dataset.endpoint;
       if (endpoint) {
         fetch(endpoint, { method: 'POST', body: d, headers: { Accept: 'application/json' } })
-          .then(function (r) {
-            if (!r.ok) throw new Error();
+          .then(function (r) { return r.json(); })
+          .then(function (res) {
+            if (!res.success) throw new Error();
             form.reset();
             say('Thank you, your message has been received.');
           })
           .catch(function () { say('Something went wrong. Please try again or email Sam directly.'); });
       } else {
-        var body = d.get('message') + '\n\nFrom: ' + d.get('first') + ' ' + d.get('last') + ' (' + d.get('email') + ')';
+        var body = d.get('message') + '\n\nFrom: ' + d.get('name') + ' (' + d.get('email') + ')';
         window.location.href = 'mailto:' + form.dataset.email +
           '?subject=' + encodeURIComponent(d.get('subject')) + '&body=' + encodeURIComponent(body);
         say('Opening your email app to send the message…');

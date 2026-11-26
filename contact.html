@@ -50,20 +50,23 @@
 
       <div class="panel">
         <h2>Send a message</h2>
-        <!-- Paste your existing form endpoint (Formspree, Web3Forms, etc.) into data-endpoint.
-             Left empty, the button opens the visitor's email app with the message filled in. -->
-        <form class="form" id="contact-form" data-endpoint="" data-email="aasifahmed497@gmail.com">
-          <label>First name<input name="first" required autocomplete="given-name"></label>
-          <label>Last name<input name="last" required autocomplete="family-name"></label>
-          <label class="full">Email address<input type="email" name="email" required autocomplete="email"></label>
-          <label class="full">Subject
+        <!-- Web3Forms: replace YOUR_ACCESS_KEY_HERE below with the key emailed to you by web3forms.com.
+             If data-endpoint is emptied, the button opens the visitor's email app instead. -->
+        <form class="form" id="contact-form" data-endpoint="https://api.web3forms.com/submit" data-email="aasifahmed497@gmail.com">
+          <input type="hidden" name="access_key" value="e94fb3f2-cd3f-44cd-9bcb-00f49afaa8c2">
+          <input type="hidden" name="from_name" value="Sam Oliver Website">
+          <!-- Spam trap: visitors never see it, bots tick it -->
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label>Name<input name="name" required autocomplete="name"></label>
+          <label>Email address<input type="email" name="email" required autocomplete="email"></label>
+          <label>Subject
             <select name="subject">
               <option>Reader Correspondence</option><option>Rights &amp; Translation</option>
               <option>Book Clubs</option><option>Other</option>
             </select>
           </label>
-          <label class="full">Message<textarea name="message" required></textarea></label>
-          <div class="full"><button class="btn btn-berry" type="submit">Send message</button></div>
+          <label>Message<textarea name="message" required></textarea></label>
+          <div><button class="btn btn-berry" type="submit">Send message</button></div>
           <p class="form-note" id="form-note" role="status"></p>
         </form>
       </div>
